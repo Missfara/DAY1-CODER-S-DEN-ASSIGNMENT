@@ -152,4 +152,7 @@ console.log(sentence1.replace(/[%@&$#;]/gi, ""));
 //QUESTION 4
 let salary =
   "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.";
-console.log(salary.match(/\d+/gi));
+//console.log(salary.match(/\d+/gi));
+let extraction = salary.match(/\d+/gi);
+let tired =
+  Number(extraction[0]) + Number(extraction[1]) + Number(extraction[2]);
