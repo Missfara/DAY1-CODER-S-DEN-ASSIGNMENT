@@ -81,85 +81,103 @@ let jan = 1970;
 let diff = now.getFullYear() - jan;
 console.log(diff);
 
-//LEVEL 2 (QUESTION 1)
-let baseTriangle = 20;
-let heightTriangle = 10;
-let areaOfTriangle = prompt("Enter base and height to calculate Area");
-alert(baseTriangle * heightTriangle);
+// //LEVEL 2 (QUESTION 1)
+// let baseTriangle = 20;
+// let heightTriangle = 10;
+// let areaOfTriangle = prompt("Enter base and height to calculate Area");
+// alert(baseTriangle * heightTriangle);
 
-//QUESTION 2
-let trian = prompt("Enter side a");
-let trian2 = prompt("Enter side b");
-let trian3 = prompt("Enter side 3");
-alert("the perimeter of the triangle will be 12");
+// //QUESTION 2
+// let trian = prompt("Enter side a");
+// let trian2 = prompt("Enter side b");
+// let trian3 = prompt("Enter side 3");
+// alert("the perimeter of the triangle will be 12");
 
-//QUESTION 3
-let revi = confirm("lets calculate the area of a rectangle");
-let lengthof = prompt(
-  "enter any number to to represent the length of a rectangle "
-);
-let widthof = prompt("enter any number to represent the width of a triangle");
-let areaof = alert(widthof * lengthof);
-let perim = confirm("let's check the perimeter as well");
-let perimof = alert(2 * (lengthof + widthof));
+// //QUESTION 3
+// let revi = confirm("lets calculate the area of a rectangle");
+// let lengthof = prompt(
+//   "enter any number to to represent the length of a rectangle "
+// );
+// let widthof = prompt("enter any number to represent the width of a triangle");
+// let areaof = alert(widthof * lengthof);
+// let perim = confirm("let's check the perimeter as well");
+// let perimof = alert(2 * (lengthof + widthof));
 
-//QUESTION 4
-let circle = confirm(
-  "lets get the area of a circle using the formular 3.14 * r * r "
-);
-let radius = prompt("Enter any number to represent radius");
-alert(3.14 * radius * radius);
-let circum = confirm("let's checkout the circumference as well");
-alert(2 * 3.14 * radius);
+// //QUESTION 4
+// let circle = confirm(
+//   "lets get the area of a circle using the formular 3.14 * r * r "
+// );
+// let radius = prompt("Enter any number to represent radius");
+// alert(3.14 * radius * radius);
+// let circum = confirm("let's checkout the circumference as well");
+// alert(2 * 3.14 * radius);
 
-//QUESTION 5
-let x = 12;
-let y = 2 * x - 2;
-console.log(y);
+// //QUESTION 5
+// let x = 12;
+// let y = 2 * x - 2;
+// console.log(y);
 
-//QUESTIOIN 9
-let see = confirm(
-  "let's calculate the earnings of  people  through their hours and rate"
-);
-let _hour = prompt("enter any number to represent hours");
-let _rate = prompt("enter any number to represent rate");
-alert(_hour * _rate);
+// //QUESTIOIN 9
+// let see = confirm(
+//   "let's calculate the earnings of  people  through their hours and rate"
+// );
+// let _hour = prompt("enter any number to represent hours");
+// let _rate = prompt("enter any number to represent rate");
+// alert(_hour * _rate);
 
-//QUESTION 10
-let nameOf = "ifeoluwa";
-if (nameOf.length > 7) {
-  console.log("your name is long");
-} else if (nameOf.length < 7) {
-  console.log("your name is short");
-}
+// //QUESTION 10
+// let nameOf = "ifeoluwa";
+// if (nameOf.length > 7) {
+//   console.log("your name is long");
+// } else if (nameOf.length < 7) {
+//   console.log("your name is short");
+// }
 
-//QUESTION 11
+// //QUESTION 11
 
-let nameFisrt = "Asebenah";
-let nameLast = "Yetayeh";
-if (nameFisrt.length > nameLast.length) {
-  console.log("your first name is longer than your family name");
-}
+// let nameFisrt = "Asebenah";
+// let nameLast = "Yetayeh";
+// if (nameFisrt.length > nameLast.length) {
+//   console.log("your first name is longer than your family name");
+// }
 
-//QUESTION 12
-let fisrtAge = 250;
-let lastAge = 25;
-if (fisrtAge.length > lastAge.length) {
-  console.log("I am 225 years oler than you");
-}
+// //QUESTION 12
+// let fisrtAge = 250;
+// let lastAge = 25;
+// if (fisrtAge.length > lastAge.length) {
+//   console.log("I am 225 years oler than you");
+// }
 
-//QUESTION 13
-let confirmation = confirm("we want to know if you are eligible to drive");
-let born = prompt("Enter your age");
-if (born >= 18) {
-  alert("You are old enough to drive");
-} else if (born < 18) {
-  alert("You are too young and not eligible to drive");
-}
+// //QUESTION 13
+// let confirmation = confirm("we want to know if you are eligible to drive");
+// let born = prompt("Enter your age");
+// if (born >= 18) {
+//   alert("You are old enough to drive");
+// } else if (born < 18) {
+//   alert("You are too young and not eligible to drive");
+// }
 
 //question 14
-let numYear = confirm(
+/*let numYear = confirm(
   "we want to calculate the number of seconds you have lived"
 );
 let secs = prompt("enter your age");
-alert(secs.getSeconds());
+alert(secs.getTime());
+console.log(secs.Date.now());*/
+
+//QUESTION 5
+const now1 = new Date();
+const yearNow = now1.getFullYear();
+const monthNow = now1.getMonth();
+const dateNow = now1.getDate();
+const hoursNow = now1.getHours();
+const minutesNow = now.getMinutes();
+console.log(
+  yearNow + "-" + monthNow + "-" + dateNow + " " + hoursNow + ":" + minutesNow
+);
+console.log(
+  dateNow + "-" + monthNow + "-" + yearNow + " " + hoursNow + ":" + minutesNow
+);
+console.log(
+  dateNow + "/" + monthNow + "/" + yearNow + " " + hoursNow + ":" + minutesNow
+);
