@@ -165,10 +165,12 @@ let solveQuad = (a, b, c) => {
 
 //QUESTION 3
 let printArray = (array) => {
-  let arr = [1, 2, 3, 4, 5, "ade", "shola"];
-  return arr;
+  for (let item of array) {
+    console.log(item);
+  }
 };
-console.log(printArray());
+let arr = [1, 2, 3, 4, 5, "ade", "shola"];
+printArray(arr);
 
 //QUESTION 4
 let showDateTime = () => {
@@ -190,6 +192,16 @@ let reverseArr = (arr) => {
 };
 
 console.log(reverseArr());
+
+//OR
+const reverseArray = (arr) => {
+  const newArr = [];
+  for (let item of arr) {
+    newArr.unshift(item);
+  }
+  return newArr;
+};
+console.log(reverseArray([1, 2, 3, 4, 5, 6, 7, "a", "b"]));
 
 //QUESTION 7
 
@@ -223,34 +235,172 @@ let sumOf = (a) => {
   }
   return sum;
 };
-console.log(sumOf(29));
+console.log(sumOf(24));
 
 //QUESTION 11
-let sumOfOdd = (a) => {
+let sumOfEven = (a) => {
   let sum = 0;
-  for (let e = 0; e <= a; e + 2) {
-    sum += e;
+  for (let e = 0; e <= a; e++) {
     if (e % 2 == 0) {
+      sum += e;
     }
   }
   return sum;
 };
-console.log(sumOfOdd(100));
+console.log(sumOfEven(100));
 
 //QUESTION 12
 
-let sumOfEven = (a) => {
+let sumOfOdd = (a) => {
   let sum = 0;
   for (let d = 0; d <= a; d++) {
-    if (d % 2 == 1) {
+    if (d % 2 !== 0) {
       sum += d;
     }
   }
   return sum;
 };
-console.log(sumOfEven(10));
+
+console.log(sumOfOdd(10));
 
 //QUESTION 13
+let odd = [];
+let even = [];
+
 let evenAndOdd = (positive) => {
-  for (let z = 0; z <= positive; z++) {}
+  for (let z = 0; z <= positive; z++) {
+    if (z % 2 === 0) {
+      even.push(positive[z]);
+    } else if (z % 2 === 1) {
+      odd.push(positive[z]);
+    }
+  }
+  return `the number of even are ${odd.length} and the number of odds are ${odd.length}`;
 };
+console.log(evenAndOdd(200));
+
+//QUESTION 14
+let sumOfEverything = (a, b, d) => {
+  let sum = a + b + d;
+  return sum;
+};
+console.log(sumOfEverything(45, 19, 23));
+
+//QUESTION 15
+
+const characters = "abcdefghijklmABCDEFOLKvbyzGHIHJK#@GHBKLOPSZQY1234567890";
+let randomId = (length) => {
+  let result = " ";
+  let characterLength = characters.length;
+  for (let y = 0; y < length; y++) {
+    result += characters.charAt(Math.floor(Math.random() * characterLength));
+  }
+  return result.toString();
+};
+console.log(randomId(4));
+
+//QUESTION 16
+
+//QUESTION 17
+const character1 = "abc12345def67#890";
+let hexaRandom = (length) => {
+  let output = " ";
+  let charactersLength = character1.length;
+  for (let y = 0; y < length; y++) {
+    output += character1.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return output.toString();
+};
+console.log(hexaRandom(5));
+
+//QUESTION 18
+
+const character2 = "abc12345def67#890ADFGWQBNMJKUYTCPLJKFSAwoplbzxysswhg";
+let UserIdGen = (length) => {
+  let output = " ";
+  let characters2Length = character2.length;
+  for (let y = 0; y < length; y++) {
+    output += character2.charAt(Math.floor(Math.random() * characters2Length));
+  }
+  return output.toString();
+};
+console.log(UserIdGen(7));
+
+//LEVEL 3
+//QUESTION 1
+
+const randomId2 = (n) => {
+  const chars = "0123456789abcdefghijklmnopqrstuvwxyz";
+  const charsArr = chars.split("");
+  let id = ``;
+  for (let i = 0; i < n; i++) {
+    id += `${charsArr[Math.floor(Math.random() * charsArr.length)]}`;
+  }
+  return id;
+};
+console.log(randomId2(10));
+
+//QUESTION 2
+let randomInteger = (num) => {
+  return Math.floor(Math.random() * (num + 1));
+};
+console.log(randomInteger(255));
+
+let rgbColorGenerator = () => {
+  let r = randomInteger(255);
+  let g = randomInteger(255);
+  let b = randomInteger(255);
+  //for (let a = 0; a < 5; a++) {
+  return `rgb ${[r, g, b]}`;
+};
+console.log(rgbColorGenerator());
+
+//Question 3
+const arrayOfHexaColors = "abc123d456ef#7890";
+let hexColor = (length) => {
+  let output = [];
+  let hexLength = arrayOfHexaColors.length;
+  for (let y = 0; y < length; y++) {
+    output += arrayOfHexaColors.charAt(Math.floor(Math.random() * hexLength));
+  }
+  return output;
+};
+console.log(hexColor(7));
+
+//QUESTION 4
+
+let arrayOfRgbColors = (num) => {
+  return Math.floor(Math.random() * (num + 1));
+};
+console.log(arrayOfRgbColors(255));
+
+let rgbColors = () => {
+  let r = arrayOfRgbColors(255);
+  let g = arrayOfRgbColors(255);
+  let b = arrayOfRgbColors(255);
+  //for (let a = 0; a < 5; a++) {
+  return `rgb ${[r, g, b]}`;
+};
+console.log(rgbColors());
+
+//QUESTION 5
+
+const arrayOfHexColors = () => {
+  let allHexCodes = "123456789abcdef";
+  let loopCount = parseInt(Math.random() * 50);
+  let hexColorArr = [];
+
+  for (let x = 1; x <= loopCount; x++) {
+    let hexChars = [];
+    for (let i = 0; i < 6; i++) {
+      hexChars.push(
+        allHexCodes[parseInt(Math.random() * allHexCodes.length) - 1]
+      );
+    }
+    hexColorArr.push("#" + hexChars.join(""));
+  }
+  return hexColorArr;
+};
+console.log(arrayOfHexColors());
+
+//QUESTION 6
