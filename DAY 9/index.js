@@ -130,10 +130,281 @@ let sum2 = products.reduce(
 
 console.log(sum2);
 
-//QUESTION 3
+//QUESTION 1
 
+// let result = (num) => {
+//   return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+// };
 
+//console.log(result(-1));
 
+//QUESTION 2
+// let check = (num) => {
+//   return num % 2 || 3 || 4 || 5 || 10 == 0
+//     ? "this number is divisible by 2 or 3 etc"
+//     : !num % 2 || 3 || 4 || 5 || 10 == 0
+//     ? "this number is not divided by 2 0r 3 etc"
+//     : "the number is odd";
+// };
+// console.log(check(70));
 
+// const divisibles = (num) => {
+//   let divisors = [],
+//     dividers = [2, 3, 4, 5, 10];
+//   for (let i = 0; i < dividers.length; i++) {
+//     if (Number(num) % dividers[i] == 0) divisors.push(dividers[i]);
+//   }
+//   if (!divisors.length) {
+//     return `${num} is not divisible by 2, 3, 4, 5 or 10`;
+//   } else if (divisors.length == 1) {
+//     return `${num} is divisible by ${divisors[0]}`;
+//   } else {
+//     return `${num} is divisible by ${divisors
+//       .slice(0, divisors.length - 1)
+//       .join(", ")} and ${divisors[divisors.length - 1]}`;
+//   }
+// };
+// console.log(divisibles(6));
+// console.log(divisibles(9));
+// console.log(divisibles(53));
 
+// //QUESTION 3
+// let answer = (arr) => (new Set(arr).size === arr.length ? false : true);
+// console.log(answer([2, 3, 4, 4, 7, 9]));
 
+// //QUESTION 4
+// let random = () => "ID" + Math.random().toString().slice(3, 8);
+// console.log(random());
+
+// //QUESTION 5
+// let mtnNumber = (check) =>
+//   /(^0|^1)(803|806|814|810|816|703|706|906)\d{7}$/.test(check)
+//     ? "valid mtn number"
+//     : "invalid mtn Number";
+
+// console.log(mtnNumber("18101056369"));
+
+// //QUESTION 6
+// let meeting = (id) =>
+//   /^[a-z]{3}-[a-z]{4}-[a-z]{3}$/.test(id) ? "valid meet id" : "invalid meet id";
+// console.log(meeting("anf-nmjh-ght"));
+
+//QUESTION 7
+
+const arrayProduct = (arr) =>
+  arr.length == 1 ? arr[0] : arr[0] * arrayProduct(arr.slice(1, arr.length));
+
+console.log(arrayProduct([8, 4, 7]));
+console.log(arrayProduct([1, 2, 3, 4, 5, 6, 7]));
+
+//QUESTION 8
+
+//DEMO
+
+//QUESTION 1
+
+// let response = (num) => {
+//   let empty = [];
+//   for (let a = num; a >= 1; a--) {
+//     empty.push(a);
+//   }
+//   return empty;
+// };
+// console.log(response(10));
+// // OR
+
+// let minus = (num) => {
+//   if (num > 1) {
+//     return num--;
+//   }
+//   return num;
+// };
+// console.log(minus(10));
+
+//QUESTION 2
+let every = (set, value) => new Set(set).has(value);
+
+console.log(every([1, 2, 2, 3, 4, 5, 6, 7, 8], 6));
+
+// //QUESTION 3
+// let bag = { keren: 3, hifeh: 5, delia: 2 };
+// console.log("keren" in Object(bag));
+// console.log(Object.entries(bag));
+
+// //QUESTION 4
+// let str = "Some-people-like-soup";
+
+// let newStr = str.replace(
+//   /-([a-z])([a-z])/g,
+//   (char1, char2, char3) => " " + char2 + " " + char3 + " "
+// );
+
+// console.log(newStr);
+
+// //QUESTION A
+// const nations = [
+//   ["libya", "Ghana", "Gambia"],
+//   ["Austria", "Poland", "Italy"],
+//   ["USA", "Australia", "Dubai"],
+// ];
+// let [a, b, c] = nations;
+// console.log(b.includes("finland"));
+
+// //QUESTION BV
+// let obj = {
+//   width: 12,
+//   height: 34,
+//   area: 65,
+// };
+
+// let { width: wid, height: hg, area: ar } = obj;
+// console.log(wid * hg);
+
+// //REGEX
+// let pat = /l..e/gi;
+// pat = /[aeiou]/gi;
+// pat = /[a-zA-Z0-9]/gi;
+// pat = /\D/gi;
+// pat = /^t/gi;
+// pat = /4$/gi;
+// pat = /[a-z]{6,8}/gi;
+// pat = /\b[a-z]{2,}/gi;
+// pat = /[^ a-zA-Z-0-9]/;
+// let sent = `There is nothing like love, except the one from God. He loved us, even when we didn't love him 44444 hallelujah`;
+// console.log(sent.match(pat));
+
+// let checkIt = (number) => {
+//   let double = /^0(710|810|803|706|703|814|806){7}[0-9]$/gi;
+//   console.log(checkIt(number).double);
+// };
+
+// let chek = (bool) => (bool === true ? "yes" : "no");
+// console.log(chek(true));
+
+// //QUESTION D
+// let ans = (arr) => {
+//   if (new Set(arr).size === arr.length) {
+//     return "same";
+//   } else {
+//     return "not same";
+//   }
+// };
+// console.log(ans([1, 2, 3, 4, 5, 6, 7, 7]));
+
+// //QUESTION C
+// let both = (arr1, arr2) => {
+//   let c = new Set([...arr1, ...arr2].sort((a, b) => a - b));
+//   return c;
+// };
+// console.log(both([1, 2, 3, 9, 4, 3, 5], [12, 21, 12, 56, 23]));
+
+//LEETCODE 1
+let string2 = (arr1, arr2) => {
+  if (arr1.length != arr2.length) {
+    return false;
+  }
+  return arr1.sort().every((item, index) => item === arr2.sort()[index]);
+};
+console.log(string2(["ade", "funmi"], ["ade", "funmi", "edward"]));
+
+//LEETCODE  2
+
+const fruits = ["banana", "orange", "mango", "lemon"];
+fruits[2] = "Apple";
+//let last = fruits.toUpperCase();
+console.log(fruits, fruits.length);
+//console.log(last);
+const eightEmptyValues = Array(8).fill("hifeh");
+console.log(eightEmptyValues);
+//
+const firstList = [1, 2, 3];
+const secondList = [4, 5, 6];
+console.log(firstList.concat(secondList));
+
+//
+let nam1 = "Asabeneh Eias Brook";
+console.log(nam1.split(" "));
+//
+// let month = prompt("enter a month");
+// let month1 = month.toLowerCase();
+// switch (month1) {
+//   case "january":
+//     console.log("january has 31 days ");
+//     break;
+//   case "february":
+//     console.log("february has 28 days");
+//     break;
+//   case "wednesday":
+//     console.log("Today is Wednesday");
+//     break;
+//   case "thursday":
+//     console.log("Today is Thursday");
+//     break;
+//   case "friday":
+//     console.log("Today is Friday");
+//     break;
+//   case "saturday":
+//     console.log("Today is Saturday");
+//     break;
+//   case "sunday":
+//     console.log("Today is Sunday");
+//     break;
+//   default:
+//     console.log("It is not a week day.");
+// }
+
+let a = 4;
+let b = 5;
+if (a > b) {
+  console.log("a is greater than b");
+} else {
+  console.log("b is greater than a");
+}
+
+a > b ? console.log("a is greater than b") : console.log("b is greater than a");
+//
+// let now = prompt("enter any number");
+// now % 2 === 0 ? console.log("it's an even number") : console.log("it's an odd number")
+//
+const countries3 = ["Finland", "Sweden", undefined, "Norway"];
+const [fin, swe, ice = "Iceland", nor, den = "Denmark"] = countries3;
+console.log(ice);
+//
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+let [d, e] = fullStack;
+console.log(d);
+//
+const countries5 = [
+  "Germany",
+  "France",
+  "Belgium",
+  "Finland",
+  "Sweden",
+  "Norway",
+  "Denmark",
+  "Iceland",
+];
+
+let [gem, fra, , ...others] = countries5;
+console.log(gem, fra, others);
+//
+
+let [...ever] = countries5;
+console.log(ever);
+//
+function add() {
+  let counter = 0;
+  function plus() {
+    counter += 1;
+  }
+  plus();
+  return counter;
+}
+console.log(add());
+
+//DOM
+let date1 = new Date();
+console.log(date1);

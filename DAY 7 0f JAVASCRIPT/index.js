@@ -404,3 +404,5 @@ const arrayOfHexColors = () => {
 console.log(arrayOfHexColors());
 
 //QUESTION 6
+let collect = (bool) => (bool === true ? "yes" : "no");
+console.log(collect(false));
